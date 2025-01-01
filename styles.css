@@ -1,4 +1,4 @@
-* { 
+*, html { 
     margin: 2px;
     padding: 0;
     box-sizing: border-box;
@@ -97,6 +97,12 @@ nav.down ul li a {
     padding: 10px;
 }
 
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
 ul {
     width: fit-content;
     height: 70px;
@@ -114,6 +120,14 @@ ul {
     text-decoration: none;
 }
 
+
+#icon_menu2, #icon_menu {
+    display: none;
+}
+
+
+
+
 /* ----------- nav -------------- */
 
 
@@ -122,12 +136,12 @@ ul {
 /* body */
 
 body {
-    width: 100%;
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    min-width: 768px;
+    /* min-width: 768px; */
 }
 
 
@@ -135,12 +149,14 @@ body {
 
 main {
     width: 100%;
-    height: 900px;
+    height: fit-content;
     padding: 100px 20px;
     position: relative;
 }
 
-
+.main-main {
+    flex-direction: column;
+}
 
 /* history section and cards */
 
@@ -168,15 +184,17 @@ main {
     box-sizing: border-box;
 }
 
+
 .card-text {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 0;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 1rem;
+    font-size: 16px;
 }
 
 .cards>img {
@@ -184,34 +202,41 @@ main {
 }
 
 .card-text>h2 {
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 400;
+    padding: 2rem;
 }
 
 .card-text>h2 , .card-text>p{
     font-family: sans-serif;
+    margin: 0;
 }
 
 .card-text>p{
-    text-align: left;
+    padding: 2em;
 }
 
 .card-1 {
-    padding: 80px 250px;
+    width: 80%;
+    /* padding: 80px 250px; */
 }
 
 
 /* section - content */
 
 .content {
-    width: 60%;
+    width: 70%;
+    height: 100%;
     justify-content: space-around;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .h2-content {
-    position: absolute;
-    top: 100px;
+    width: 200px;
+    height: 400px;
+    font-size: 3em;
+    text-align: center;
 }
 
 .img-card {
@@ -220,14 +245,21 @@ main {
 }
 
 .card {
-    width: 450px;
-    height: 500px;
+    width: 550px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
 }
+
+
+
+.card img {
+    width: 100%;
+}
+
 
 .p-card {
     width: 80%;
@@ -276,7 +308,7 @@ footer {
 .text_asset_footer {
     color: aliceblue;
     height: 100%;
-    font-size: 20px;
+    font-size: 1.3em;
     font-family: sans-serif;
     display: flex;
     align-items: center;
@@ -284,34 +316,146 @@ footer {
 }
 
 @media screen and (max-width : 768px){
-    * {
+    *, html {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
         overflow-x: hidden;
         scrollbar-width: none;
     }
 
-    html, body {
-        max-width: 100%;
+
+    /* header */
+
+    .history-header {
+        height: 480px;
     }
 
-    .content {
+    /* menu */
+
+    #content-menu-mobile {
+        position: fixed;
+        display: none;
+        width: 400px;
+        height: 300px;
+        right: 0;
+        top: 0;
+        /* background-color: rgb(255, 255, 255); */
+        animation-name: animation2;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+
+    #content-menu-mobile::selection {
+        background-color: black;
+    }
+
+    @keyframes animation2 {
+        from {
+            background-color: rgb(0, 0, 0);
+            width: 0px;
+        }
+        
+        to {
+            background-color: rgb(255, 255, 255);
+            width: 400px;
+        }
+
+    }
+
+    .down2 {
+        background-color: black;
+    }
+
+    /* nav */
+
+    nav {
+        height: fit-content;
+
+    }
+
+    #menu {
+        width: 180px;
+        height: 200px;
         flex-direction: column;
+        text-align: center;
+        z-index: 11;
+        padding: 46px 15px 0px 15px;
+    }
+
+    #menu li {
+        width: 300px;
+        height: 50px;
+        border: 2px black solid;
+
+    }
+
+    #menu li a {
+        font-size: 1.2em;
+        text-shadow: none;
+        color: black;
+    }
+
+    #icon_menu {
+        display: block;
+    }
+
+    #icon_menu2 {
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 35px;
+        z-index: 12;
+    }
+
+
+    /* title */
+
+    .white-title {
+        font-size: 2.4em;
+    }
+    
+
+
+    /* body */
+
+    body {
+        max-width: 100%;
+        height: fit-content;
+        gap: 100px;
+    }
+
+
+    .main-header {
+        height: 450px;
+    }
+
+
+    .content {
+        width: 100%;
+        height: 100%;
         padding: 0;
         gap: 20px;
     }
+
     .card {
-        width: 100%;
-        height: 550px;
+        width: 90%;
+        height: 95%;
         display: flex;
         /* flex-direction: row; */
         justify-content: space-around;
         gap: 30px;
-        opacity: 0.5;
+        box-shadow: 1px 1px 11px black;
     }
 
     .card:hover {
         opacity: 1;
+    }
+
+    .h2-content {
+        height: 200px;
     }
 
     .img-card {
@@ -319,13 +463,13 @@ footer {
         height: auto;
     }
 
-    main {
-        height: fit-content;
+    .main-main {
+        padding: 0;
+        justify-content: space-between;
         width: 100%;
     }
 
     .a-card {
-        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -343,6 +487,50 @@ footer {
         width: 100%;
         text-align: center;
         font-size: 20px;
+    }
+
+
+
+    /* media history */
+
+    .history-main {
+        gap: 15px;
+    }
+
+    .history-section-card {
+        box-shadow: 1px 10px 12px rgb(100, 99, 99);
+    }
+
+    .cards {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #img-card3 {
+        order: 1;
+    }
+
+    .card-2 .card-text {
+        order: 2;
+    }
+
+
+    .cards img {
+        width: 100%;
+    }
+
+    .card-text > h2 {
+        font-size: 1.5em;
+    }
+
+
+    .logo_and_h3>img, .text_asset_footer>img {
+        width: 50px;
+        height: auto;
+    }
+
+    .logo_and_h3>h3, .text_asset_footer {
+        font-size: 1em;
     }
 
 }

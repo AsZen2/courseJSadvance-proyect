@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <style>
+        
+        canvas {
+            background-color: aliceblue;
+        }
+
+
+    </style>
+
+</head>
+
+    <body>
+
+        <canvas id="canvas" width="1200px" height="1200px">
+            
+        </canvas>
+
+
+
+        <script>
+
+            let element = document.querySelector("canvas")
+            let lienzo = element.getContext("2d")
+            let interval;
+
+            // lienzo.fillRect(20, 100, 250, 500)
+            // lienzo.strokeRect(800, 400, 280, 500)
+            // lienzo.clearRect(50, 0, 800, 1200)
+
+            lienzo.beginPath()
+            lienzo.moveTo(100, 100)
+            lienzo.lineTo(400, 100)
+            // lienzo.rect(150, 50, 100, 100)
+            // lienzo.arc(200, 800, 50, 0, Math.PI, true)
+            // lienzo.arcTo(400, 500, 50, 0, 40)
+            lienzo.quadraticCurveTo(580, 850, 600, 600)
+
+            lienzo.fillStyle = "pink"
+            lienzo.globalAlpha = '0.6'
+            lienzo.fill()
+            console.dir(lienzo)
+        </script>
+
+    </body>
+    
+</html>

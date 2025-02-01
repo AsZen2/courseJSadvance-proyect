@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+             margin: 0;
+             padding: 0
+        }
+
+        svg {
+            display: flex;
+            border: 2px solid black;
+            width: fit-content;
+            height: fit-content;
+            transform: translateY(-180px);
+            animation: showUp 1.5s forwards;
+        }
+
+        .blackSvg {
+            animation: showUp 2.1s forwards;
+            perspective: 100px;
+            transform: translateY(-180px);
+        }
+
+        line {
+            animation: showUp 3.1s forwards;
+            perspective: 100px;
+            transform: translateY(-180px);
+        }
+
+        @keyframes showUp {
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- <svg>
+
+        <rect x="50" y="100" width="150px" height="1" fill="#2ecc71" stroke="blue" stroke-width="4"
+        rx="10"></rect>
+
+        <circle cx="300" cy="200" r="160" fill="orange"></circle>
+
+        <ellipse cx="300" cy="200" rx="100" ry="40"></ellipse>
+
+        <line x1="400" y1="50" x2="500" y2="400" stroke="black" stroke-width="4"></line>
+
+        <polyline points="20 500, 100 500, 50 100, 10 60" fill="none" stroke="black"></polyline>
+
+    </svg> -->
+
+    <!-- <svg>
+
+        <circle cx="200" cy="150" r="90" fill="red"></circle>
+        <circle cx="350" cy="150" r="90" fill="red"></circle>
+        <polyline points="125 200, 275 380, 275 380, 425 200" fill="red"></polyline>
+
+    </svg> -->
+
+    <svg>
+        <rect x="10" y="0" width="110px" height="70px" fill="#868686" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+        <rect class="blackSvg" x="15" y="5" width="100px" height="60px" fill="black" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+        <line x1="22" y1="18" x2="70" y2="18" stroke="green" stroke-width="4"></line>
+        <line x1="22" y1="25" x2="70" y2="25" stroke="green" stroke-width="4"></line>
+        <line x1="22" y1="32" x2="40" y2="32" stroke="green" stroke-width="4"></line>
+        <line x1="22" y1="39" x2="50" y2="39" stroke="green" stroke-width="4"></line>
+        <line x1="22" y1="46" x2="90" y2="46" stroke="green" stroke-width="4"></line>
+        <line x1="22" y1="53" x2="90" y2="53" stroke="green" stroke-width="4"></line>
+        <rect x="50" y="70" width="32px" height="18px" fill="#868686" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+        <polygon points="20 92, 0 110, 130 110, 110 92" fill="#868686" stroke="rgb(112, 112, 112)" stroke-width="2"></polygon>
+        <polygon class="blackSvg" points="22 94, 8 108, 122 108, 108 94" fill="black" stroke="rgb(112, 112, 112)" stroke-width="2"></polygon>
+    </svg>
+
+<!--
+    - figuras primitivas rectangulos circulos elipse lineas / el orden importa
+    - no podemos utilizar z-index
+    - coordenadas x & y donde se encontrara el objeto
+    - tamaños width height
+
+    All: 
+
+    - fill -> color de relleno
+    - stroke -> contorno
+    - stroke-width -> grosor del contorno
+
+
+    rect:
+
+    - rx -> redondeo de bordes (sin unidad o con porcentajes)
+
+    circle:
+
+    - cy & cx -> coordenada del centro de la circunferencia
+    - r-> radio
+
+    ellipse:
+
+    - cy & cx -> coordenada del centro de la circunferencia
+    - rx & ry -> radio horizontal y vertical
+
+    line:
+
+    x1-y1 & x2-y2 -> coordenadas de los puntos a & b
+
+    polyline & polygon:
+
+    points -> pares de coordenadas por una coma
+
+-->
+
+
+
+</body>
+</html>

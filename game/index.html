@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's game</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+    <body class="bodyGame">
+        <nav>
+            <svg>
+                <a href="../index.html">
+                    <rect x="10" y="0" width="110px" height="70px" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                    <rect class="blackSvg" x="15" y="5" width="100px" height="60px" fill="black" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                    <line x1="22" y1="18" x2="70" y2="18" stroke="green" stroke-width="4"></line>
+                    <line x1="22" y1="25" x2="70" y2="25" stroke="green" stroke-width="4"></line>
+                    <line x1="22" y1="32" x2="40" y2="32" stroke="green" stroke-width="4"></line>
+                    <line x1="22" y1="39" x2="50" y2="39" stroke="green" stroke-width="4"></line>
+                    <line x1="22" y1="46" x2="90" y2="46" stroke="green" stroke-width="4"></line>
+                    <line x1="22" y1="53" x2="90" y2="53" stroke="green" stroke-width="4"></line>
+                    <rect x="50" y="70" width="32px" height="18px" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                    <polygon points="20 92, 0 110, 130 110, 110 92" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></polygon>
+                    <polygon class="blackSvg" points="22 94, 8 108, 122 108, 108 94" fill="black" stroke="gray" stroke-width="2"></polygon>
+                </a>
+            </svg>
+
+            <img id="icon_menu" src="../my_images/menu.png" alt="">
+
+            <div id="content-menu-mobile" class="full-center">
+                <img id="icon_menu2" src="../my_images/menu2.png" alt="">
+
+                <ul id="menu" class="full-center">
+                    <li class="full-center"><a class="a-li" href="../history/index.html">History</a></li>
+                    <li class="full-center" ><a class="a-li" href="#">Let's play</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <header class="full-center game-header">
+
+            <h1 class="white-title">LET'S HAVE FUN</h1>
+
+        </header>
+
+        <section id="gameID" class="gameZone full-center">
+
+            <h2 class="h2-game">Let's do puzzles and see what the picture is.</h2>
+
+            <div class="containerObjectsGame dropZone">
+                <div class="boxDD boxDrop drop1" id=""><p>Drop it here</p></div>
+                <div class="boxDD boxDrop drop2" id=""><p>Drop it here</p></div>
+                <div class="boxDD boxDrop drop3" id=""><p>Drop it here</p></div>
+            </div>
+
+            <div class="containerObjectsGame dragZone">
+                <img id="img-1" src="../imagenes/rompe2.png" class="boxDD boxDrag drag1" id="" draggable="true"></img>
+                <img id="img-2" src="../imagenes/rompe1.png" class="boxDD boxDrag drag2" id="" draggable="true"></img>
+                <img id="img-3" src="../imagenes/rompe3.png" class="boxDD boxDrag drag3" id="" draggable="true"></img>
+            </div>
+
+            <button type="button" id="buttonResetGame">Restart</button>
+        </section>
+
+
+
+        <footer class="full-center">
+
+            <div class="assets">
+                <div class="logo_and_h3">
+                    <img width="110px" height="80px" src="../imagenes/logo.png" alt="">
+                    <h3>Programing and History</h3>
+                </div>
+                <div class="text_asset_footer">
+                    <img src="../my_images/icon-developer.png" alt="">
+                    This site was create by me.
+                </div>
+            </div>
+            
+        </footer>
+        <!-- <script src="game.js"></script> -->
+        <script src="game.js"></script>
+        <script src="../functions.js"></script>
+    </body>
+</html>

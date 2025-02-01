@@ -11,54 +11,97 @@
     <body>
         <header class="full-center main-header">
             <nav>
-                <div class="logo full-center">
-                    <a href="#">LOGO</a>
-                </div>
+                <svg>
+                    <a href="#">
+                        <rect x="10" y="0" width="110px" height="70px" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                        <rect class="blackSvg" x="15" y="5" width="100px" height="60px" fill="black" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                        <line x1="22" y1="18" x2="70" y2="18" stroke="green" stroke-width="4"></line>
+                        <line x1="22" y1="25" x2="70" y2="25" stroke="green" stroke-width="4"></line>
+                        <line x1="22" y1="32" x2="40" y2="32" stroke="green" stroke-width="4"></line>
+                        <line x1="22" y1="39" x2="50" y2="39" stroke="green" stroke-width="4"></line>
+                        <line x1="22" y1="46" x2="90" y2="46" stroke="green" stroke-width="4"></line>
+                        <line x1="22" y1="53" x2="90" y2="53" stroke="green" stroke-width="4"></line>
+                        <rect x="50" y="70" width="32px" height="18px" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></rect>
+                        <polygon points="20 92, 0 110, 130 110, 110 92" fill="gray" stroke="rgb(112, 112, 112)" stroke-width="2"></polygon>
+                        <polygon class="blackSvg" points="22 94, 8 108, 122 108, 108 94" fill="black" stroke="gray" stroke-width="2"></polygon>
+                    </a>
+                </svg>
+                <!-- <div class="logo full-center">
+                    <div class="box-1 full-center">
+                        <div class="inter box1">
+                            <div class="inter-inter">
+                                <div class="inter-inter-box1"></div>
+                                <div class="inter-inter-box2"></div>
+                                <div class="inter-inter-box3"></div>
+                                <div class="inter-inter-box4"></div>
+                                <div class="inter-inter-box5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-2"></div>
+                    <div class="box-3 full-center">
+                        <div class="inter box2">
+
+                        </div>
+                    </div>
+                </div> -->
                 <img id="icon_menu" src="./my_images/menu.png" alt="">
 
                 <div id="content-menu-mobile" class="full-center">
                     <img id="icon_menu2" src="./my_images/menu2.png" alt="">
 
                     <ul id="menu" class="full-center">
-                        <li class="full-center"><a class="a-li" href="history/index.html">History</a></li>
-                        <li class="full-center" ><a class="a-li" href="">Let's play</a></li>
+                        <li class="full-center"><a class="li-nav a-li" href="history/index.html">History</a></li>
+                        <li class="full-center" ><a class="li-nav a-li" href="./game/index.html">Let's play</a></li>
                     </ul>
 
                 </div>
             </nav>
-            <h1 class="white-title">The history of programming</h1>
+            <h1 class="white-title">THE HISTORY OF PROGRAMMING</h1>
         </header>
 
-        <main class="main-main full-center">
+        <main id="main-main" class="full-center">
 
-            <h2 class="h2-content">Content</h2>            
+            <h2 class="h2-content full-center">Content</h2>            
 
-            <div class="content full-center">
-                <div class="card">
-                    <img class="img-card" src="imagenes/historia-programacion.jpg" alt="" class="img-card">
+            <div class="content-cards full-center">
+
+                <div class="card full-center">
+                    <img class="img-card" src="imagenes/historia-programacion.jpg" alt="history-programming-ilustration" class="img-card">
                     <p class="p-card">Let's know a little bit about The history of the programing</p>
-                    <a class="a-card" href="">Go to history</a>
+                    <a class="a-card" href="./history/index.html">Go to history</a>
                 </div>
-                <div class="card">
-                    <img class="img-card" src="imagenes/img2.jpg" alt="">
+                
+                <div class="card full-center">
+                    <img class="img-card" src="imagenes/img2.jpg" alt="developer-computer">
                     <p class="p-card">Let's go to play a little bit using learned methods in class</p>
-                    <a class="a-card" href="">Go to game</a>
+                    <a class="a-card" href="./game/index.html">Go to game</a>
                 </div>
+
             </div>
         </main>
 
 
         <footer class="full-center">
+
             <div class="assets">
+
                 <div class="logo_and_h3">
-                    <img width="110px" height="80px" src="imagenes/logo.png" alt="">
-                    <h3>Programing and History</h3>
+
+                    <img width="110px" height="80px" src="imagenes/logo.png" alt="img-footer-logo-tag-html">
+                    <h3>Programming and History</h3>
+
                 </div>
+
                 <div class="text_asset_footer">
-                    <img src="./my_images/icon-developer.png" alt="">
+
+                    <img src="./my_images/icon-developer.png" alt="img-footer-logo-computer-developer">
                     This site was create by me.
+
                 </div>
+
             </div>
+
         </footer>
 
         <script src="functions.js"></script>

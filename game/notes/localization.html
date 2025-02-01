@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalization</title>
+</head>
+    <body>
+        <h1>Geolocalization</h1>
+        <script>
+
+            // API - Aplication Programming Interface
+            // API - Formspree - Giphy - Youtube DataAPI .. asincronia (fetch)
+            // API - HTML5 : Canvas - Geolocalization - Drag%%Drop - Web Storage
+
+            // -------- GEOLOCALIZATION API ------------- 
+
+            // This allow to know divice's ubication somewhere opening site if user accepted it.
+
+
+            // console.dir(navigator.geolocation)
+
+            // getCurrentPosition() -> user current position, three functions, ok; error; setObject
+            // watchPosition() -> user current position that will repeat every so often
+            // clearWatch()
+
+            // ok
+
+            // coords - accuracy (precision)
+
+
+
+            // error
+
+            // error -> 1 - denied localization by user
+            // error -> 2 - It was not posible to locate position
+            // error -> 3 - Insuficcient time 
+
+
+            function ok(position) {
+                console.log(position, + 'coords:' + position.coords)
+            }
+
+            function error(position) {
+                console.log(position)
+                position.message = 'Error'                
+            }
+
+            const setObject = {
+                    enableHighAccuracy:true, // it try to be the most accurate
+                    timeout: 3000,
+                    maximumAge:2000 
+            }
+
+            navigator.geolocation.getCurrentPosition(ok, error)
+
+            console.log(navigator.geolocation.getCurrentPosition(ok, error))
+        </script>
+
+    </body>
+</html>
